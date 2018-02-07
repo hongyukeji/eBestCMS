@@ -8,7 +8,7 @@
                     <div class="panel-heading">社区</div>
 
                     <div class="panel-body">
-                        社区内容
+                        内容
                     </div>
                 </div>
             </div>
