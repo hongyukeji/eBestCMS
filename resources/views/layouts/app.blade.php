@@ -57,8 +57,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            <li><a href="{{ route('login') }}">{{ trans('app.Login') }}</a></li>
+                            <li><a href="{{ route('register') }}">{{ trans('app.Register') }}</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
@@ -88,6 +88,16 @@
         </nav>
 
         @yield('content')
+
+        <footer class="footer">
+            <div class="container">
+                <p class="pull-left">
+                    &copy; <a href="http://hongyuvip.com" target="_blank">鸿宇科技</a> 版权所有
+                </p>
+
+                <p class="pull-right"><a href="{{ url('/') }}#fh5co-contact">联系我们</a></p>
+            </div>
+        </footer>
     </div>
 
     <!-- Scripts -->
