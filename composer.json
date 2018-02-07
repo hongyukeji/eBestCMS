@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "hongyukeji/ebestcms",
+    "description": "eBestCMS Advanced Project Template",
+    "keywords": ["ebestcms", "hongyushop", "hongyu", "hongyukeji"],
     "license": "MIT",
     "type": "project",
     "require": {

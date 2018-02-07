@@ -13,5 +13,5 @@ yarn-error.log
 .env
 
 composer.lock
-package.lock
+package-lock.json
 yarn.lock
