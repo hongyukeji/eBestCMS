@@ -10,4 +10,9 @@ class ToolsController extends Controller
     {
         return view('tools.index');
     }
+
+    public function toggleCase()
+    {
+        return view('tools.toggle_case');
+    }
 }

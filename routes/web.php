@@ -41,5 +41,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/community', 'CommunityController@index')->name('community');
 
-Route::get('/tools', 'ToolsController@index')->name('tools');
 
+Route::prefix('tools')->group(function () {
+    Route::get('/', 'ToolsController@index')->name('tools');
+    Route::get('/toggleCase', 'ToolsController@toggleCase');
+});

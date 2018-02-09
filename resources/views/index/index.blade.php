@@ -80,8 +80,8 @@
                     <li class="active"><a href="javascript:;" data-nav-section="home"><span>{{ trans('app.Home') }}</span></a></li>
                     {{--<li><a class="external" href="http://www.ebestmall.com/" target="_blank"><span>eBestMall</span></a></li>--}}
                     {{--<li><a class="external" href="http://hongyuweb.taobao.com" target="_blank"><span>淘宝店</span></a></li>--}}
-                    <li><a class="external" href="{{ url('/community') }}"><span>{{ trans('app.Community') }}</span></a></li>
-                    <li><a class="external" href="{{ url('/tools') }}"><span>{{ trans('app.Tools') }}</span></a></li>
+                    <li><a class="external" href="{{ route('community') }}"><span>{{ trans('app.Community') }}</span></a></li>
+                    <li><a class="external" href="{{ route('tools') }}"><span>{{ trans('app.Tools') }}</span></a></li>
                     <li><a href="javascript:;" data-nav-section="work"><span>{{ trans('app.Cases') }}</span></a></li>
                     <li><a href="javascript:;" data-nav-section="testimonials"><span>{{ trans('app.Testimonials') }}</span></a></li>
                     <li><a href="javascript:;" data-nav-section="services"><span>{{ trans('app.Services') }}</span></a></li>

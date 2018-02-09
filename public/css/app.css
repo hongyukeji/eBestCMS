@@ -11406,7 +11406,7 @@ button.close {
 /* Common styles */
 
 body {
-  font-family: Hiragino Sans GB, "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial,sans-serif;
+  font-family: Hiragino Sans GB, "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial, sans-serif;
 }
 
 /* Sticky footer styles */
@@ -11469,5 +11469,20 @@ body {
 
 .footer .container p a {
   color: inherit;
+}
+
+/* Breadcrumb */
+
+.breadcrumb {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid #EAEAEA;
+  border-radius: 4px;
+}
+
+.breadcrumb a {
+  color: #3399CC;
 }
 

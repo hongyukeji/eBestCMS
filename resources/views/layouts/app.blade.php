@@ -37,8 +37,8 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         <li><a href="{{ url('/') }}">首页</a></li>
-                        <li><a href="{{ url('/community') }}">社区</a></li>
-                        <li><a href="{{ url('/tools') }}">工具</a></li>
+                        <li><a href="{{ route('community') }}">社区</a></li>
+                        <li><a href="{{ route('tools') }}">工具</a></li>
                         <li>
                             <form class="navbar-form" action="{{ url('/search') }}" method="get">
                                 <div class="input-group">
@@ -92,7 +92,7 @@
         <footer class="footer">
             <div class="container">
                 <p class="pull-left">
-                    &copy; <a href="http://hongyuvip.com" target="_blank">鸿宇科技</a> 版权所有
+                    &copy; 2015-{{ date('Y',time()) }} <a href="http://hongyuvip.com" target="_blank">鸿宇科技</a> 版权所有
                 </p>
 
                 <p class="pull-right"><a href="{{ url('/') }}#fh5co-contact">联系我们</a></p>
