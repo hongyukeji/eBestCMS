@@ -16,24 +16,30 @@
                     <div class="row">
                         <div class="col-lg-5">
                             <label>转换前</label>
-                            <textarea id="source-content" class="form-control" name="source" rows="6"
-                                      placeholder="请输入需要转换的内容"></textarea></div>
+                            <textarea id="source-content" class="form-control" name="source" rows="8" placeholder="请输入需要转换的内容"></textarea></div>
                         <div class="col-lg-2">
                             <div class="row" style="margin-top: 25px;">
+
                                 <div class="form-group">
                                     <button type="button" id="btn-capital" class="center-block btn btn-success">全部转大写</button>
                                 </div>
+
                                 <div class="form-group">
-                                    <button type="button" id="btn-lower" class="center-block btn btn-info">全部转小写</button>
+                                    <button type="button" id="btn-lower" class="center-block btn btn-primary">全部转小写</button>
                                 </div>
+
                                 <div class="form-group">
                                     <button type="button" id="btn-capital-lower" class="center-block btn btn-warning">首字母大写</button>
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="button" id="btn-length-calc" class="center-block btn btn-info">字符串长度</button>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-5">
                             <label>转换后</label>
-                            <textarea id="now-content" class="form-control" name="now" rows="6"></textarea></div>
+                            <textarea id="now-content" class="form-control" name="now" rows="8"></textarea></div>
                     </div>
                 </div>
             </div>
@@ -45,6 +51,7 @@
                     var btnCapital = $('#btn-capital');
                     var btnLower = $('#btn-lower');
                     var btnCapitalLower = $('#btn-capital-lower');
+                    var btnLengthCalc = $('#btn-length-calc');
                     btnCapital.on('click', function () {
                         nowContent.val(sourceContent.val().toUpperCase());
                     });
@@ -55,6 +62,14 @@
                         nowContent.val(sourceContent.val().replace(/\b\w+\b/g, function (word) {
                             return word.substring(0, 1).toUpperCase() + word.substring(1).toLowerCase();
                         }));
+                    });
+                    btnLengthCalc.on('click', function () {
+                        nowContent.val(getStrLength(sourceContent.val()));
+
+                        function getStrLength(str) {
+                            var cArr = str.match(/[^\x00-\xff]/ig);
+                            return str.length + (cArr == null ? 0 : cArr.length);
+                        }
                     });
                 });
             </script>
