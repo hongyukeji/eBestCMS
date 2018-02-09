@@ -9,7 +9,7 @@
 
                     <div class="panel-body">
                         <div class="list-group">
-                            <a href="#" class="list-group-item">
+                            <a href="/article/1" class="list-group-item">
                                 <h4 class="list-group-item-heading">
                                     文章标题
                                     <span class="badge pull-right">浏览数: 99</span>

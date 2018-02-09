@@ -2,13 +2,22 @@
 
 @section('content')
     <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="/">首页</a></li>
+            <li><a href="{{ route('community') }}">社区</a></li>
+            <li><a href="#">最新公告</a></li>
+            <li class="active">{{ str_limit($article->title,'32') }}</li>
+        </ul>
+
         <div class="row">
             <div class="col-md-9">
                 <div class="panel panel-default">
-                    <div class="panel-heading text-center">文章</div>
+                    <div class="panel-heading text-center">
+                        <h4>{{ $article->title }}</h4>
+                    </div>
 
                     <div class="panel-body">
-                        文章内容
+                        {!! $article->content !!}
                     </div>
                 </div>
             </div>

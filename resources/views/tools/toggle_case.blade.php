@@ -3,7 +3,8 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <ul class="breadcrumb"><li><a href="/">首页</a></li>
+            <ul class="breadcrumb">
+                <li><a href="/">首页</a></li>
                 <li><a href="{{ route('community') }}">社区</a></li>
                 <li><a href="{{ route('tools') }}">工具</a></li>
                 <li class="active">字符串大小写转换</li>
