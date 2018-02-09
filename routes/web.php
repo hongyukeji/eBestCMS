@@ -37,10 +37,11 @@ Route::prefix('auth')->group(function () {
     Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('home', 'HomeController@index')->name('home');
 
-Route::get('/community', 'CommunityController@index')->name('community');
+Route::get('community', 'CommunityController@index')->name('community');
 
+Route::resource('article', 'ArticleController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 
 Route::prefix('tools')->group(function () {
     Route::get('/', 'ToolsController@index')->name('tools');
