@@ -5,7 +5,7 @@
         <ul class="breadcrumb">
             <li><a href="/">首页</a></li>
             <li><a href="{{ route('community') }}">社区</a></li>
-            <li><a href="#">最新公告</a></li>
+            <li><a href="#">{{ $article->category->name }}</a></li>
             <li class="active">{{ str_limit($article->title,'32') }}</li>
         </ul>
 
