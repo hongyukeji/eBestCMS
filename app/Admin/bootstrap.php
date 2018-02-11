@@ -18,7 +18,17 @@
  *
  */
 
+use Encore\Admin\Facades\Admin;
+
 Encore\Admin\Form::forget(['map', 'editor']);
 
 Encore\Admin\Form::extend('editor', \App\Admin\Extensions\WangEditor::class);
 //Encore\Admin\Form::extend('ckeditor', \App\Admin\Extensions\Form\CKEditor::class);
+
+Admin::navbar(function (\Encore\Admin\Widgets\Navbar $navbar) {
+
+    $navbar->left(view('admin.search-bar'));
+
+    $navbar->right(new \App\Admin\Extensions\Nav\Links());
+
+});
