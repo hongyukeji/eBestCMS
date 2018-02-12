@@ -12,7 +12,7 @@
                             <a href="/article/1" class="list-group-item">
                                 <h4 class="list-group-item-heading">
                                     文章标题
-                                    <span class="badge pull-right">浏览数: 99</span>
+                                    <span class="badge pull-right">发布时间：2018-2-13</span>
                                 </h4>
                                 <p class="list-group-item-text">
                                     文章内容简介
@@ -21,7 +21,7 @@
                             <a href="#" class="list-group-item">
                                 <h4 class="list-group-item-heading">
                                     文章标题
-                                    <span class="badge pull-right">浏览数: 98</span>
+                                    <span class="badge pull-right">发布时间：2018-2-13</span>
                                 </h4>
                                 <p class="list-group-item-text">
                                     文章内容简介

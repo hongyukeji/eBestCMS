@@ -78,10 +78,10 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="javascript:;" data-nav-section="home"><span>{{ trans('app.Home') }}</span></a></li>
-                    {{--<li><a class="external" href="http://www.ebestmall.com/" target="_blank"><span>eBestMall</span></a></li>--}}
-                    {{--<li><a class="external" href="http://hongyuweb.taobao.com" target="_blank"><span>淘宝店</span></a></li>--}}
-                    <li><a class="external" href="{{ route('community') }}"><span>{{ trans('app.Community') }}</span></a></li>
-                    <li><a class="external" href="{{ route('tools') }}"><span>{{ trans('app.Tools') }}</span></a></li>
+                    <li><a class="external" href="http://www.ebestmall.com/" target="_blank"><span>eBestMall</span></a></li>
+                    <li><a class="external" href="http://hongyuweb.taobao.com" target="_blank"><span>淘宝店</span></a></li>
+                    {{--<li><a class="external" href="{{ route('news') }}"><span>{{ trans('app.News') }}</span></a></li>--}}
+                    {{--<li><a class="external" href="{{ route('tools') }}"><span>{{ trans('app.Tools') }}</span></a></li>--}}
                     <li><a href="javascript:;" data-nav-section="work"><span>{{ trans('app.Cases') }}</span></a></li>
                     <li><a href="javascript:;" data-nav-section="testimonials"><span>{{ trans('app.Testimonials') }}</span></a></li>
                     <li><a href="javascript:;" data-nav-section="services"><span>{{ trans('app.Services') }}</span></a></li>
@@ -513,7 +513,7 @@
                         @endforeach
                     </div>
                 @endif
-                <form class="form-horizontal col-md-12" method="POST" action="{{ url('/site/messageBoard') }}">
+                <form class="form-horizontal col-md-12" method="POST" action="{{ url('/index/messageBoard') }}">
                     {{ csrf_field() }}
                     <div class="form-group ">
                         <label for="name" class="sr-only">Name</label>

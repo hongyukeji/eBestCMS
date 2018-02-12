@@ -49,4 +49,5 @@ return [
     'About' => '关于',
     'Contact' => '联系',
     'Tools' => '工具',
+    'News' => '新闻',
 ];

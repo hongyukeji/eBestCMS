@@ -9,6 +9,7 @@
         "dominator88/laravel-smart": "dev-master",
         "encore/laravel-admin": "^1.5",
         "fideloper/proxy": "~3.3",
+        "mobiledetect/mobiledetectlib": "^2.8",
         "laravel-admin-ext/api-tester": "^1.0",
         "laravel-admin-ext/config": "^1.0",
         "laravel-admin-ext/helpers": "^1.0",
