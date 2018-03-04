@@ -15,8 +15,8 @@
     return view('welcome');
 });*/
 
-Route::get('/', 'IndexController@index')->name('index');
-Route::post('/index/messageBoard', 'IndexController@messageBoard');
+Route::get('/', 'DefaultController@index')->name('index');
+Route::post('/site/messageBoard', 'SiteController@messageBoard')->name('message_board');
 
 //Auth::routes();
 
@@ -42,6 +42,7 @@ Route::get('home', 'HomeController@index')->name('home');
 
 Route::get('community', 'CommunityController@index')->name('community');
 Route::get('news', 'NewsController@index')->name('news');
+Route::get('empower', 'EmpowerController@index')->name('empower');
 
 Route::resource('article', 'ArticleController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 

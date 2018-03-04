@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{ app()->getLocale() }}"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="{{ app()->getLocale() }}"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang="{{ app()->getLocale() }}"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ app()->getLocale() }}"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zh-CN"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="zh-CN"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="zh-CN"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,21 +25,21 @@
     <meta name="twitter:card" content="" />
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
 
     <!--<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>-->
-    <link href='/statics/index/fonts/fonts-googleapis.css' rel='stylesheet' type='text/css'>
+    <link href='static/elate/fonts/fonts-googleapis.css' rel='stylesheet' type='text/css'>
 
     <!-- Animate.css -->
-    <link rel="stylesheet" href="/statics/index/css/animate.css">
+    <link rel="stylesheet" href="static/elate/css/animate.css">
     <!-- Icomoon Icon Fonts-->
-    <link rel="stylesheet" href="/statics/index/css/icomoon.css">
+    <link rel="stylesheet" href="static/elate/css/icomoon.css">
     <!-- Simple Line Icons -->
-    <link rel="stylesheet" href="/statics/index/css/simple-line-icons.css">
+    <link rel="stylesheet" href="static/elate/css/simple-line-icons.css">
     <!-- Magnific Popup -->
-    <link rel="stylesheet" href="/statics/index/css/magnific-popup.css">
+    <link rel="stylesheet" href="static/elate/css/magnific-popup.css">
     <!-- Bootstrap  -->
-    <link rel="stylesheet" href="/statics/index/css/bootstrap.css">
+    <link rel="stylesheet" href="static/elate/css/bootstrap.css">
 
     <!--
     Default Theme Style
@@ -55,15 +55,15 @@
 
     -->
 
-    <link rel="stylesheet" href="/statics/index/css/style.css">
+    <link rel="stylesheet" href="static/elate/css/style.css">
 
     <!-- Modernizr JS -->
-    <script src="/statics/index/js/modernizr-2.6.2.min.js"></script>
+    <script src="static/elate/js/modernizr-2.6.2.min.js"></script>
     <!-- FOR IE9 below -->
     <!--[if lt IE 9]>
-    <script src="/statics/index/js/respond.min.js"></script>
+    <script src="static/elate/js/respond.min.js"></script>
     <![endif]-->
-
+    <script src="https://s4.cnzz.com/z_stat.php?id=1256050038&web_id=1256050038" language="JavaScript"></script>
 </head>
 <body>
 <header role="banner" id="fh5co-header">
@@ -73,28 +73,22 @@
             <div class="navbar-header">
                 <!-- Mobile Toggle Menu Button -->
                 <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-                <a class="navbar-brand" href="{{ url('/') }}">鸿宇科技</a>
+                <a class="navbar-brand" href="http://www.hongyuvip.com">鸿宇科技</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="javascript:;" data-nav-section="home"><span>{{ trans('app.Home') }}</span></a></li>
-                    <li><a class="external" href="http://www.ebestmall.com/" target="_blank"><span>eBestMall</span></a></li>
+                    <li class="active"><a href="javascript:;" data-nav-section="home"><span>首页</span></a></li>
+                    <li><a class="external" href="http://www.fuwuweb.com" target="_blank"><span>鸿宇社区</span></a></li>
+                    <li><a class="external" href="http://bbs.hongyuvip.com" target="_blank"><span>鸿宇论坛</span></a></li>
+                    <li><a class="external" href="http://xjd.hongyuvip.com" target="_blank"><span>鸿宇小京东</span></a></li>
+                    <li><a class="external" href="http://buy.hongyuvip.com" target="_blank"><span>鸿宇大商创</span></a></li>
                     <li><a class="external" href="http://hongyuweb.taobao.com" target="_blank"><span>淘宝店</span></a></li>
-                    {{--<li><a class="external" href="{{ route('news') }}"><span>{{ trans('app.News') }}</span></a></li>--}}
-                    {{--<li><a class="external" href="{{ route('tools') }}"><span>{{ trans('app.Tools') }}</span></a></li>--}}
-                    <li><a href="javascript:;" data-nav-section="work"><span>{{ trans('app.Cases') }}</span></a></li>
-                    <li><a href="javascript:;" data-nav-section="testimonials"><span>{{ trans('app.Testimonials') }}</span></a></li>
-                    <li><a href="javascript:;" data-nav-section="services"><span>{{ trans('app.Services') }}</span></a></li>
-                    <li><a href="javascript:;" data-nav-section="about"><span>{{ trans('app.About') }}</span></a></li>
-                    <li><a href="javascript:;" data-nav-section="contact"><span>{{ trans('app.Contact') }}</span></a></li>
-                    {{--@if (Route::has('login'))
-                        @auth
-                            <li><a class="external"  href="{{ url('/home') }}"><span>{{ trans('app.Member Center') }}</span></a></li>
-                        @else
-                            <li><a class="external"  href="{{ route('register') }}"><span>{{ trans('app.Register') }}</span></a></li>
-                            <li><a class="external"  href="{{ route('login') }}"><span>{{ trans('app.Login') }}</span></a></li>
-                        @endauth
-                    @endif--}}
+                    <li><a href="javascript:;" data-nav-section="work"><span>案例</span></a></li>
+                    <li><a href="javascript:;" data-nav-section="testimonials"><span>文化</span></a></li>
+                    <li><a href="javascript:;" data-nav-section="services"><span>服务</span></a></li>
+                    <li><a href="javascript:;" data-nav-section="about"><span>关于</span></a></li>
+                    <li><a href="javascript:;" data-nav-section="contact"><span>联系</span></a></li>
+
                 </ul>
             </div>
         </nav>
@@ -102,7 +96,7 @@
     </div>
 </header>
 
-<section id="fh5co-home" data-section="home" style="background-image: url(/statics/index/images/full_image_2.jpg);" data-stellar-background-ratio="0.5">
+<section id="fh5co-home" data-section="home" style="background-image: url(static/elate/images/full_image_2.jpg);" data-stellar-background-ratio="0.5">
     <div class="gradient"></div>
     <div class="container">
         <div class="text-wrap">
@@ -119,77 +113,77 @@
             </div>
         </div>
     </div>
-    <div class="slant"></div>
+    <!--<div class="slant"></div>-->
 </section>
 
 <section id="fh5co-intro">
     <div class="container">
         <div class="row row-bottom-padded-lg">
-            <div class="fh5co-block to-animate" style="background-image: url(/statics/index/images/img_7.jpg);">
+            <div class="fh5co-block to-animate" style="background-image: url(static/elate/images/img_7.jpg);">
                 <div class="overlay-darker"></div>
                 <div class="overlay"></div>
                 <div class="fh5co-text">
                     <i class="fh5co-intro-icon icon-bullhorn"></i>
-                    <h2>eBestMall 最新动态</h2>
-                    <p>eBestMall（鸿宇V8） - B2B2C电商系统 即将到来，敬请期待！创业之路，鸿宇愿陪您一起走过。</p>
-                    <p><a href="javascript:;" class="btn btn-primary" target="_blank">更多</a></p>
+                    <h2>eBestMall</h2>
+                    <p>eBestMall 基于PHP框架开发的B2B2C现代一体化电商平台系统。采用最前沿的Web技术和UI界面设计，彰显鸿宇团队的用心。</p>
+                    <p><a href="http://www.ebestmall.com" class="btn btn-primary" target="_blank">查看</a></p>
                 </div>
             </div>
-            <div class="fh5co-block to-animate" style="background-image: url(/statics/index/images/img_8.jpg);">
+            <div class="fh5co-block to-animate" style="background-image: url(static/elate/images/img_8.jpg);">
                 <div class="overlay-darker"></div>
                 <div class="overlay"></div>
                 <div class="fh5co-text">
                     <i class="fh5co-intro-icon icon-book"></i>
-                    <h2>鸿宇社区（建设中）</h2>
+                    <h2>鸿宇社区</h2>
                     <p>专注提供 eBest 系列完善的解决方案。如果您是运维人员、开发人员、项目负责人以及Boss，在社区里面都能找到您需要的资料。</p>
-                    <p><a href="javascript:;" class="btn btn-primary" target="_blank">访问社区</a></p>
+                    <p><a href="http://www.fuwuweb.com" class="btn btn-primary" target="_blank">访问社区</a></p>
                 </div>
             </div>
-            <div class="fh5co-block to-animate" style="background-image: url(/statics/index/images/img_10.jpg);">
+            <div class="fh5co-block to-animate" style="background-image: url(static/elate/images/img_10.jpg);">
                 <div class="overlay-darker"></div>
                 <div class="overlay"></div>
                 <div class="fh5co-text">
                     <i class="fh5co-intro-icon icon-diamond"></i>
-                    <h2>eBestMall（鸿宇V8）</h2>
-                    <p>eBestMall 基于Laravel5.5框架开发的B2B2C现代一体化电商平台系统。采用最前沿的Web技术和UI界面设计，彰显鸿宇团队的用心。</p>
-                    <p><a href="http://www.ebestmall.com/" class="btn btn-primary" target="_blank">查看演示站点</a></p>
+                    <h2>鸿宇大商创（鸿宇V8）</h2>
+                    <p>企业级多用户商城系统，国内首款免费多用户商城系统，打造PC+WAP+APP+入住+微营销整体电商系统。</p>
+                    <p><a href="http://buy.hongyuvip.com" class="btn btn-primary" target="_blank">查看演示站点</a></p>
                 </div>
             </div>
-            <div class="fh5co-block to-animate" style="background-image: url(/statics/index/images/img_7.jpg);">
+            <div class="fh5co-block to-animate" style="background-image: url(static/elate/images/img_7.jpg);">
                 <div class="overlay-darker"></div>
                 <div class="overlay"></div>
                 <div class="fh5co-text">
                     <i class="fh5co-intro-icon icon-bullhorn"></i>
                     <h2>鸿宇淘宝店</h2>
                     <p>鸿宇科技唯一官方淘宝店铺，两年老店值得信赖。本店专门出售鸿宇科技商品，假一罚十信誉保证。本店的服务宗旨是用心服务，以诚待人!</p>
-                    <p><a href="http://hongyuweb.taobao.com/" class="btn btn-primary" target="_blank">去看看</a></p>
+                    <p><a href="http://hongyuweb.taobao.com" class="btn btn-primary" target="_blank">去看看</a></p>
                 </div>
             </div>
-            <div class="fh5co-block to-animate" style="background-image: url(/statics/index/images/img_8.jpg);">
+            <div class="fh5co-block to-animate" style="background-image: url(static/elate/images/img_8.jpg);">
                 <div class="overlay-darker"></div>
                 <div class="overlay"></div>
                 <div class="fh5co-text">
                     <i class="fh5co-intro-icon icon-book"></i>
                     <h2>鸿宇论坛</h2>
-                    <p>鸿宇自2015年11月18日起,至今已经为支持鸿宇的用户，稳定运营保驾护航<?= intval((time() - strtotime('2015-11-18')) / 86400) ?>天。共发布8次更新，修复105条BUG，用事实证明选择鸿宇是您最正确的决定。</p>
-                    <p><a href="http://bbs.hongyuvip.com/" class="btn btn-primary" target="_blank">访问论坛</a></p>
+                    <p>鸿宇自2015年11月18日起,至今已经为支持鸿宇的用户，稳定运营保驾护航836天。共发布8次更新，修复105条BUG，用事实证明选择鸿宇是您最正确的决定。</p>
+                    <p><a href="http://bbs.hongyuvip.com" class="btn btn-primary" target="_blank">访问论坛</a></p>
                 </div>
             </div>
-            <div class="fh5co-block to-animate" style="background-image: url(/statics/index/images/img_10.jpg);">
+            <div class="fh5co-block to-animate" style="background-image: url(static/elate/images/img_10.jpg);">
                 <div class="overlay-darker"></div>
                 <div class="overlay"></div>
                 <div class="fh5co-text">
                     <i class="fh5co-intro-icon icon-diamond"></i>
                     <h2>鸿宇多用户商城</h2>
                     <p>B2B2B2C模式的电商系统，融合多供货商、多店铺，完美打通线上线下。同城电商生态系统 零售、批发、分销一体化平台+站点+店铺入驻+供货商+门店多角色运营模式。</p>
-                    <p><a href="http://buy.hongyuvip.com/" class="btn btn-primary" target="_blank">查看演示站点</a></p>
+                    <p><a href="http://xjd.hongyuvip.com" class="btn btn-primary" target="_blank">查看演示站点</a></p>
                 </div>
             </div>
         </div>
 
         <div class="row watch-video text-center to-animate">
             <span>互联网时代鸿宇愿与您携手共创辉煌</span>
-            <a href="/uploads/videos/demo-video.mp4" class="popup-vimeo btn-video"><i class="icon-play2"></i></a>
+            <a href="static/uploads/videos/demo-video.mp4" class="popup-vimeo btn-video"><i class="icon-play2"></i></a>
         </div>
     </div>
 </section>
@@ -210,7 +204,7 @@
             <div class="col-md-4 col-sm-6 col-xxs-12">
                 <!--<a href="javascript:;" class="fh5co-project-item image-popup to-animate" target="_blank">-->
                 <a href="http://www.xiongmaolingshi.com" class="fh5co-project-item to-animate" target="_blank">
-                    <img src="/uploads/images/temps/al-01.jpg" alt="Image" class="img-responsive">
+                    <img src="static/uploads/images/temps/al-01.jpg" alt="Image" class="img-responsive">
                     <div class="fh5co-text">
                         <h2>熊猫零食</h2>
                         <span>采用 HongYuJD 系统</span>
@@ -219,7 +213,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xxs-12">
                 <a href="http://www.ebestmall.com" class="fh5co-project-item to-animate" target="_blank">
-                    <img src="/uploads/images/temps/eBestMall.jpg" alt="Image" class="img-responsive">
+                    <img src="static/uploads/images/temps/eBestMall.jpg" alt="Image" class="img-responsive">
                     <div class="fh5co-text">
                         <h2>eBestMall</h2>
                         <span>eBestMall - B2B2C商城系统</span>
@@ -231,7 +225,7 @@
 
             <div class="col-md-4 col-sm-6 col-xxs-12">
                 <a href="http://www.huadiansc.com" class="fh5co-project-item to-animate" target="_blank">
-                    <img src="/uploads/images/temps/al-02.jpg" alt="Image" class="img-responsive">
+                    <img src="static/uploads/images/temps/al-02.jpg" alt="Image" class="img-responsive">
                     <div class="fh5co-text">
                         <h2>花店商城</h2>
                         <span>采用 HongYuJD 系统</span>
@@ -240,7 +234,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xxs-12">
                 <a href="http://www.zgd1hl.com" class="fh5co-project-item to-animate" target="_blank">
-                    <img src="/uploads/images/temps/al-03.jpg" alt="Image" class="img-responsive">
+                    <img src="static/uploads/images/temps/al-03.jpg" alt="Image" class="img-responsive">
                     <div class="fh5co-text">
                         <h2>中国第一婚礼网</h2>
                         <span>采用 HongYuJD 系统</span>
@@ -252,7 +246,7 @@
 
             <div class="col-md-4 col-sm-6 col-xxs-12">
                 <a href="http://bbs.hongyuvip.com" class="fh5co-project-item to-animate" target="_blank">
-                    <img src="/uploads/images/temps/hongyubbs.jpg" alt="Image" class="img-responsive">
+                    <img src="static/uploads/images/temps/hongyubbs.jpg" alt="Image" class="img-responsive">
                     <div class="fh5co-text">
                         <h2>鸿宇论坛</h2>
                         <span>采用 HongYuBBS 系统</span>
@@ -260,10 +254,10 @@
                 </a>
             </div>
             <div class="col-md-4 col-sm-6 col-xxs-12">
-                <a href="http://www.yu8.cc/" class="fh5co-project-item to-animate" target="_blank">
-                    <img src="/uploads/images/temps/al-04.jpg" alt="Image" class="img-responsive">
+                <a href="http://www.xjtb.com" class="fh5co-project-item to-animate" target="_blank">
+                    <img src="static/uploads/images/temps/al-04.jpg" alt="Image" class="img-responsive">
                     <div class="fh5co-text">
-                        <h2>玛纳斯碧玉商城</h2>
+                        <h2>新疆淘宝</h2>
                         <span>采用 HongYuJD 系统</span>
                     </div>
                 </a>
@@ -291,7 +285,7 @@
                         <p>&ldquo;科学是人类的共同财富，而真正科学家的任务就是丰富这个全人类都能受益的知识宝库。&rdquo;</p>
                     </blockquote>
                     <div class="author to-animate">
-                        <figure><img src="/statics/index/images/user8-128x128.jpg" alt="Person"></figure>
+                        <figure><img src="static/elate/images/user8-128x128.jpg" alt="Person"></figure>
                         <p>
                             Freedom Wind <a href="javascript:;" target="_blank">HongYuKeJi</a>
                             <span class="subtext">前端工程师</span>
@@ -305,7 +299,7 @@
                         <p>&ldquo;你们在想要攀登到科学顶峰之前，务必把科学的初步知识研究透彻。还没有充分领会前面的东西时，就决不要动手搞往后的事情。&rdquo;</p>
                     </blockquote>
                     <div class="author to-animate">
-                        <figure><img src="/statics/index/images/user2-160x160.jpg" alt="Person"></figure>
+                        <figure><img src="static/elate/images/user2-160x160.jpg" alt="Person"></figure>
                         <p>
                             Shadow <a href="http://www.hongyuvip.com/" target="_blank">HongYuKeJi</a>
                             <span class="subtext">全栈工程师</span>
@@ -320,7 +314,7 @@
                         <p>&ldquo;在科学上没有平坦的大道，只有不畏劳苦沿着陡峭山路攀登的人，才有希望达到光辉的顶点。&rdquo;</p>
                     </blockquote>
                     <div class="author to-animate">
-                        <figure><img src="/statics/index/images/user5-200x200.jpg" alt="Person"></figure>
+                        <figure><img src="static/elate/images/user5-200x200.jpg" alt="Person"></figure>
                         <p>
                             Angel Kiss <a href="http://www.hongyuvip.com/" target="_blank">HongYuKeJi</a> <span class="subtext">UI设计师</span>
                         </p>
@@ -388,7 +382,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="fh5co-person text-center to-animate">
-                    <figure><img src="/statics/index/images/user1-128x128.jpg" alt="Image"></figure>
+                    <figure><img src="static/elate/images/user1-128x128.jpg" alt="Image"></figure>
                     <h3>Spider</h3>
                     <span class="fh5co-position">前端工程师</span>
                     <p>熟练掌握Html5、Css3、Javascript等前端语言。熟练运用Photoshop、Sublime text、Atom、Chrome等常用网页设计制作软件。精通HTML+CSS网页布局与样式。</p>
@@ -401,7 +395,7 @@
             </div>
             <div class="col-md-4">
                 <div class="fh5co-person text-center to-animate">
-                    <figure><img src="/statics/index/images/user2-160x160.jpg" alt="Image"></figure>
+                    <figure><img src="static/elate/images/user2-160x160.jpg" alt="Image"></figure>
                     <h3>Shadow</h3>
                     <span class="fh5co-position">全栈工程师</span>
                     <p>全栈工程师，拥有七年以上程序开发经验，五年PHP程序开发经验，三年以上大型项目开发经验。精通C/C++、PHP、Html5、Css3、Javascript、jQuery、Ajax等web开发语言。</p>
@@ -412,7 +406,7 @@
             </div>
             <div class="col-md-4">
                 <div class="fh5co-person text-center to-animate">
-                    <figure><img src="/statics/index/images/user3-200x200.jpg" alt="Image"></figure>
+                    <figure><img src="static/elate/images/user3-200x200.jpg" alt="Image"></figure>
                     <h3>Dream</h3>
                     <span class="fh5co-position">UI设计师</span>
                     <p>精通软件：Photoshop、WebStorm、Dreamweaver、Illustrator、Flash、Axure。4年网站界面设计经验，2年Android界面设计，熟悉网站界面和android界面设计标准。</p>
@@ -427,7 +421,7 @@
     </div>
 </section>
 
-<section id="fh5co-counters" style="background-image: url(/statics/index/images/full_image_1.jpg);" data-stellar-background-ratio="0.5">
+<section id="fh5co-counters" style="background-image: url(static/elate/images/full_image_1.jpg);" data-stellar-background-ratio="0.5">
     <div class="fh5co-overlay"></div>
     <div class="container">
         <div class="row">
@@ -490,7 +484,7 @@
                     </li>
                     <li><i class="icon-phone"></i><a href="tel:13952101395">139-5210-1395</a></li>
                     <li><i class="icon-qq"></i> <a href="http://wpa.qq.com/msgrd?V=1&uin=1527200768&Menu=yes" target="_blank">1527200768</a></li>
-                    <li><i class="icon-envelope"></i> <a href="mailto:hongyukeji@126.com">hongyukeji@126.com</a></li>
+                    <li><i class="icon-envelope"></i> <a href="mailto:admin@hongyuvip.com">admin@hongyuvip.com</a></li>
                     <li>
                         <i class="icon-globe"></i>
                         <a href="http://www.hongyuvip.com" target="_blank">http://www.hongyuvip.com</a>
@@ -513,23 +507,23 @@
                         @endforeach
                     </div>
                 @endif
-                <form class="form-horizontal col-md-12" method="POST" action="{{ url('/index/messageBoard') }}">
+                <form class="form-horizontal col-md-12" method="POST" action="{{ route('message_board') }}">
                     {{ csrf_field() }}
                     <div class="form-group ">
                         <label for="name" class="sr-only">Name</label>
-                        <input id="name" class="form-control" name="username" placeholder="您的名字" type="text" value="{{ old('username') }}" autocomplete="off" required>
+                        <input id="name" class="form-control" name="username" placeholder="您的名字" type="text" value="" autocomplete="off" required>
                     </div>
                     <div class="form-group ">
                         <label for="email" class="sr-only">Email</label>
-                        <input id="email" class="form-control" name="email" placeholder="您的邮箱" type="text" value="{{ old('email') }}" autocomplete="off">
+                        <input id="email" class="form-control" name="email" placeholder="您的邮箱" type="text" value="" autocomplete="off">
                     </div>
                     <div class="form-group ">
                         <label for="phone" class="sr-only">Phone</label>
-                        <input id="phone" class="form-control" name="mobile" placeholder="您的手机号" type="text" value="{{ old('mobile') }}" autocomplete="off">
+                        <input id="phone" class="form-control" name="mobile" placeholder="您的手机号" type="text" value="" autocomplete="off">
                     </div>
                     <div class="form-group ">
                         <label for="content" class="sr-only">Content</label>
-                        <textarea id="content" cols="30" rows="5" class="form-control" name="content" placeholder="请输入留言内容" required>{{ old('content') }}</textarea>
+                        <textarea id="content" cols="30" rows="5" class="form-control" name="content" placeholder="请输入留言内容" required></textarea>
                     </div>
                     <div class="form-group ">
                         <input class="btn btn-primary btn-lg" value="提交" type="submit">
@@ -544,7 +538,7 @@
 </section>
 
 <footer id="footer" role="contentinfo">
-    <a href="javascript:;" class="gotop js-gotop" style="height: 75px;"><i class="icon-arrow-up2"></i></a>
+    <a href="javascript:;" class="gotop js-gotop" style="height: 50px;"><i class="icon-arrow-up2"></i></a>
     <div class="container">
         <div class="">
             <div class="col-md-12 text-center">
@@ -554,8 +548,6 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <ul class="social social-circle">
-                    {{--<li><a href="#"><i class="icon-twitter"></i></a></li>--}}
-                    {{--<li><a href="#"><i class="icon-facebook"></i></a></li>--}}
                     <li><a href="http://wpa.qq.com/msgrd?v=3&uin=1527200768&site=qq&menu=yes" target="_blank"><i class="icon-qq"></i></a></li>
                 </ul>
             </div>
@@ -564,26 +556,26 @@
 </footer>
 
 <!-- jQuery -->
-<script src="/statics/index/js/jquery.min.js"></script>
+<script src="static/elate/js/jquery.min.js"></script>
 <!-- jQuery Easing -->
-<script src="/statics/index/js/jquery.easing.1.3.js"></script>
+<script src="static/elate/js/jquery.easing.1.3.js"></script>
 <!-- Bootstrap -->
-<script src="/statics/index/js/bootstrap.min.js"></script>
+<script src="static/elate/js/bootstrap.min.js"></script>
 <!-- Waypoints -->
-<script src="/statics/index/js/jquery.waypoints.min.js"></script>
+<script src="static/elate/js/jquery.waypoints.min.js"></script>
 <!-- Stellar Parallax -->
-<script src="/statics/index/js/jquery.stellar.min.js"></script>
+<script src="static/elate/js/jquery.stellar.min.js"></script>
 <!-- Counter -->
-<script src="/statics/index/js/jquery.countTo.js"></script>
+<script src="static/elate/js/jquery.countTo.js"></script>
 <!-- Magnific Popup [work] -->
-<script src="/statics/index/js/jquery.magnific-popup.min.js"></script>
-<script src="/statics/index/js/magnific-popup-options.js"></script>
+<script src="static/elate/js/jquery.magnific-popup.min.js"></script>
+<script src="static/elate/js/magnific-popup-options.js"></script>
 <!-- Google Map -->
 <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>-->
-<!--<script src="/statics/index/js/google_map.js"></script>-->
+<!--<script src="static/elate/js/google_map.js"></script>-->
 
 <!-- Main JS (Do not remove) -->
-<script src="/statics/index/js/main.js"></script>
+<script src="static/elate/js/main.js"></script>
 
 </body>
 </html>

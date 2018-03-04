@@ -39,7 +39,7 @@ function init() {
             new google.maps.Marker({
                 position: latlng,
                 map: map,
-                icon: '/statics/index/images/loc.png'
+                icon: '/static/elate/images/loc.png'
             });
 
         });
