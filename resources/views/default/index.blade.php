@@ -78,17 +78,17 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="javascript:;" data-nav-section="home"><span>首页</span></a></li>
-                    <li><a class="external" href="http://www.fuwuweb.com" target="_blank"><span>鸿宇社区</span></a></li>
-                    <li><a class="external" href="http://bbs.hongyuvip.com" target="_blank"><span>鸿宇论坛</span></a></li>
+                    <li><a class="external" href="{{ route('article.index') }}"><span>文章</span></a></li>
+                    <li><a class="external" href="http://www.fuwuweb.com" target="_blank"><span>社区</span></a></li>
+                    <li><a class="external" href="http://bbs.hongyuvip.com" target="_blank"><span>论坛</span></a></li>
+                    <li><a class="external" href="http://hongyuweb.taobao.com" target="_blank"><span>淘宝店</span></a></li>
                     <li><a class="external" href="http://xjd.hongyuvip.com" target="_blank"><span>鸿宇小京东</span></a></li>
                     <li><a class="external" href="http://buy.hongyuvip.com" target="_blank"><span>鸿宇大商创</span></a></li>
-                    <li><a class="external" href="http://hongyuweb.taobao.com" target="_blank"><span>淘宝店</span></a></li>
                     <li><a href="javascript:;" data-nav-section="work"><span>案例</span></a></li>
                     <li><a href="javascript:;" data-nav-section="testimonials"><span>文化</span></a></li>
                     <li><a href="javascript:;" data-nav-section="services"><span>服务</span></a></li>
                     <li><a href="javascript:;" data-nav-section="about"><span>关于</span></a></li>
                     <li><a href="javascript:;" data-nav-section="contact"><span>联系</span></a></li>
-
                 </ul>
             </div>
         </nav>

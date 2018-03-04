@@ -41,7 +41,6 @@ Route::prefix('auth')->group(function () {
 Route::get('home', 'HomeController@index')->name('home');
 
 Route::get('community', 'CommunityController@index')->name('community');
-Route::get('news', 'NewsController@index')->name('news');
 Route::get('empower', 'EmpowerController@index')->name('empower');
 
 Route::resource('article', 'ArticleController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);

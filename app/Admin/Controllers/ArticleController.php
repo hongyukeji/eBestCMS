@@ -76,9 +76,9 @@ class ArticleController extends Controller
 
             $grid->id('ID')->sortable();
 
-            $grid->column('title','标题');
+            $grid->column('title', '标题');
 
-            $grid->cate_id('分类')->display(function($userId) {
+            $grid->cate_id('分类')->display(function ($userId) {
                 return Category::find($userId)->name;
             });
 
@@ -102,12 +102,12 @@ class ArticleController extends Controller
         return Admin::form(Article::class, function (Form $form) {
 
             $form->display('id', 'ID');
-
             $form->text('title', '标题');
+            $form->select('cate_id', '分类')->options([1 => '默认分类', 2 => '网站公告']);
             $form->textarea('summary', '摘要');
             $form->editor('content', '内容');
             $form->number('sort_order', '排序');
-            $form->switch('status', '状态');
+            $form->switch('status', '状态')->default('1');
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
         });

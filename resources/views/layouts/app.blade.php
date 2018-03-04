@@ -29,7 +29,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        {{ config('app.name', 'eBestCMS') }}
                     </a>
                 </div>
 
@@ -37,7 +37,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         <li><a href="{{ url('/') }}">首页</a></li>
-                        <li><a href="{{ route('news') }}">新闻</a></li>
+                        <li><a href="{{ route('article.index') }}">文章</a></li>
                         <li><a href="{{ route('tools') }}">工具</a></li>
                         <li>
                             <form class="navbar-form" action="{{ url('/search') }}" method="get">

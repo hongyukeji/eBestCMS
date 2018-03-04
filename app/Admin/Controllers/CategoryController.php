@@ -75,6 +75,10 @@ class CategoryController extends Controller
 
             $grid->id('ID')->sortable();
 
+            $grid->name('分类名称');
+            $grid->parent_id('父级分类');
+            $grid->sort_order('排序');
+            $grid->status('状态');
             $grid->created_at();
             $grid->updated_at();
         });
@@ -90,7 +94,10 @@ class CategoryController extends Controller
         return Admin::form(Category::class, function (Form $form) {
 
             $form->display('id', 'ID');
-
+            $form->text('name', '分类名称');
+            $form->number('parent_id', '父级分类');
+            $form->number('sort_order', '排序');
+            $form->switch('status', '状态')->default('1');
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
         });
