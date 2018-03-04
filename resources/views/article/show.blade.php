@@ -5,7 +5,7 @@
         <ul class="breadcrumb">
             <li><a href="/">首页</a></li>
             <li><a href="{{ route('article.index') }}">文章</a></li>
-            <li><a href="#">{{ $article->category->name }}</a></li>
+            <li><a href="javascript:;">{{ $article->category->name }}</a></li>
             <li class="active">{{ str_limit($article->title,'32') }}</li>
         </ul>
 
