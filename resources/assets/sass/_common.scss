@@ -1,0 +1,55 @@
+/* App Css Common */
+
+/* Sticky footer styles */
+html {
+  //position: relative;
+  height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  position: relative;
+  min-height: 100%;
+}
+
+/* Footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  //height: 62px;
+  background-color: #303133;
+
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+
+    p {
+      margin: 19px 0;
+      color: #c1c1c1;
+
+      a {
+        color: inherit;
+      }
+    }
+  }
+}
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  border-top: 4px solid $main-hue;
+}
+
+.card {
+  border-radius: 0;
+}
+
+.card-header {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.card-default .card-header {
+  color: rgba(0, 0, 0, 0.5);
+}
