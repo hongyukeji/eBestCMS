@@ -5,26 +5,17 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": ">=7.0.0",
-        "dominator88/laravel-smart": "dev-master",
-        "encore/laravel-admin": "^1.5",
-        "fideloper/proxy": "~3.3",
-        "mobiledetect/mobiledetectlib": "^2.8",
-        "laravel-admin-ext/api-tester": "^1.0",
-        "laravel-admin-ext/config": "^1.0",
-        "laravel-admin-ext/helpers": "^1.0",
-        "laravel-admin-ext/media-manager": "^1.0",
-        "laravel-admin-ext/scheduling": "^1.0",
-        "laravel/framework": "5.5.*",
-        "laravel/tinker": "~1.0"
+        "php": "^7.1.3",
+        "fideloper/proxy": "^4.0",
+        "laravel/framework": "5.6.*",
+        "laravel/tinker": "^1.0"
     },
     "require-dev": {
-        "barryvdh/laravel-debugbar": "^3.1",
-        "filp/whoops": "~2.0",
-        "fzaninotto/faker": "~1.4",
-        "mockery/mockery": "~1.0",
-        "phpunit/phpunit": "~6.0",
-        "symfony/thanks": "^1.0"
+        "filp/whoops": "^2.0",
+        "fzaninotto/faker": "^1.4",
+        "mockery/mockery": "^1.0",
+        "nunomaduro/collision": "^2.0",
+        "phpunit/phpunit": "^7.0"
     },
     "autoload": {
         "classmap": [
@@ -63,10 +54,6 @@
         "sort-packages": true,
         "optimize-autoloader": true
     },
-    "repositories": {
-        "packagist": {
-            "type": "composer",
-            "url": "https://packagist.laravel-china.org"
-        }
-    }
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
