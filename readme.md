@@ -17,6 +17,11 @@ composer create-project hongyukeji/ebestcms ebestcms
 composer create-project hongyukeji/ebestcms ebestcms dev-master
 ```
 
+* 数据迁移
+```
+php artisan migrate:fresh --seed
+```
+
 ## 运行环境
 
 * PHP版本：>= 7.1.3
