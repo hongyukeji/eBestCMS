@@ -9,17 +9,25 @@ eBestCMS
 
 * 运营版：
 ```
-composer create-project hongyukeji/ebestcms ebestcms
+$ composer create-project hongyukeji/ebestcms ebestcms
 ```
 
 * 开发版：
 ```
-composer create-project hongyukeji/ebestcms ebestcms dev-master
+$ composer create-project hongyukeji/ebestcms ebestcms dev-master
+```
+
+* 
+```
+$ git clone https://github.com/hongyukeji/eBestCMS.git
+$ composer update
+$ edit .env
+$ php artisan migrate:fresh --seed
 ```
 
 * 数据迁移
 ```
-php artisan migrate:fresh --seed
+
 ```
 
 ## 运行环境
