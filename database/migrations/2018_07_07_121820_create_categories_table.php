@@ -19,6 +19,7 @@ class CreateCategoriesTable extends Migration
             $table->integer('parent_id');
             $table->integer('sequence');
             $table->tinyInteger('status');
+            $table->timestamps();
         });
     }
 

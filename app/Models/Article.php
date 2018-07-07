@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Carbon;
+
 
 class Article extends Model
 {
@@ -16,12 +16,5 @@ class Article extends Model
     {
         return $this->belongsTo('App\Models\Category');
     }
-
-    public function getCreatedAtAttribute($date)
-    {
-        if (Carbon::now() < Carbon::parse($date)->addDays(10)) {
-            return Carbon::parse($date);
-        }
-        return Carbon::parse($date)->diffForHumans();
-    }
+    
 }

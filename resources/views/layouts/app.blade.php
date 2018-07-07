@@ -38,22 +38,24 @@
                             <a class="nav-link" href="{{ url('/') }}">首页</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/articles') }}">文章</a>
+                            <a class="nav-link" href="{{ route('article.index') }}">文章</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 分类<span class="caret"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">分类1</a>
-                                <a class="dropdown-item" href="#">分类2</a>
+                                <a class="dropdown-item" href="{{ route('category.index') }}">所有分类</a>
+                                @foreach ($category as $cate)
+                                <a class="dropdown-item" href="{{ url('/category/' . $cate->id) }}">{{ $cate->name }}</a>
+                                @endforeach
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/messageBoard') }}">留言板</a>
+                            <a class="nav-link" href="{{ url('/site/messageBoard') }}">留言板</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/about') }}">关于</a>
+                            <a class="nav-link" href="{{ url('/site/about') }}">关于</a>
                         </li>
                     </ul>
 
@@ -62,22 +64,26 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">登录</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link" href="{{ route('register') }}">注册</a>
                             </li>
                         @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('article.create') }}">写文章</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                    <a class="dropdown-item" href="{{ route('home') }}">
+                                        个人中心
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        安全退出
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

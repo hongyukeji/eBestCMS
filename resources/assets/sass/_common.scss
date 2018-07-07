@@ -38,24 +38,32 @@ body {
   }
 }
 
+.breadcrumb {
+  background-color: #ffffff;
+}
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
   border-top: 4px solid $main-hue;
 }
 
-.card {
-  border-radius: 0;
-}
-
-.card-header, .card-footer {
-  background-color: rgba(0, 0, 0, 0);
-}
-
 .card-default {
+  border-radius: 0;
   margin-bottom: 1.5rem;
 }
 
 .card-default .card-header {
+  padding: 0.75rem 0;
+  margin: 0 1.25rem;
   color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.card-default .card-footer {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.card-default .card-img-top {
+  border-radius: 0;
 }

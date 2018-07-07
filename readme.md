@@ -201,3 +201,102 @@ php artisan make:request CreateExampleRequest  |   创建请求类（app/Http/Re
  storage               存储
   storage:link         创建一个符号链接，从"public/storage" 到 "storage/app/public"
 ```
+
+### Laravel 常用
+
+* composer 重新加载
+```
+composer dump-autoload
+```
+
+* artisan 清理配置文件缓存
+```
+php artisan config:cache    // 清理并重新生成配置文件
+php artisan config:clear    // 仅清理配置文件
+```
+
+* 模板中限制内容
+```
+{{ str_limit($article->content, 300, '...') }}
+```
+
+* 不转义 输出格式化去掉html标签
+```
+{!! $content !!}
+```
+
+* 语言包使用
+```
+trans('app.name')
+```
+
+* 日期格式转换 [DateTime Docs](http://carbon.nesbot.com/docs/) (String Formatting)
+```
+$dt = Carbon::create(1975, 12, 25, 14, 15, 16);
+
+var_dump($dt->toDateTimeString() == $dt);          // bool(true) => uses __toString()
+echo $dt->toDateString();                          // 1975-12-25
+echo $dt->toFormattedDateString();                 // Dec 25, 1975
+echo $dt->toTimeString();                          // 14:15:16
+echo $dt->toDateTimeString();                      // 1975-12-25 14:15:16
+echo $dt->toDayDateTimeString();                   // Thu, Dec 25, 1975 2:15 PM
+
+// ... of course format() is still available
+echo $dt->format('l jS \\of F Y h:i:s A');         // Thursday 25th of December 1975 02:15:16 PM
+```
+
+* 发送邮件
+
+> /.env
+```
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.mxhichina.com
+MAIL_PORT=465
+MAIL_USERNAME=admin@hongyuvip.com
+MAIL_PASSWORD=
+MAIL_ENCRYPTION=ssl
+```
+
+> Controller
+```
+public function mail()
+{
+    // 发送邮件 - 文本模式
+    $name = 'Shadow';
+    Mail::raw('邮件内容', function ($message) use ($name) {
+        $message->from('admin@hongyuvip.com', '鸿宇科技' . $name);
+        $message->subject('邮件主题');
+        $message->to('1527200768@qq.com');
+    });
+    
+    // 发送邮件 - Html模式
+    Mail::send('mail.main', ['name' => '鸿宇科技', 'token' => rand(000000,999999)], function ($message){
+        $message->from('admin@hongyuvip.com', '鸿宇科技');
+        $message->subject('邮件主题');
+        $message->to('1527200768@qq.com');
+    });
+}
+```
+
+* 日期格式处理-多少天前
+
+> Model
+```
+use Illuminate\Support\Carbon;
+
+public function getCreatedAtAttribute($date)
+{
+    if (Carbon::now() < Carbon::parse($date)->addDays(10)) {
+        return Carbon::parse($date);
+    }
+    return Carbon::parse($date)->diffForHumans();
+}
+```
+
+> 中文显示
+```
+public function boot()
+{
+    \Illuminate\Support\Carbon::setLocale('zh');
+}
+```
