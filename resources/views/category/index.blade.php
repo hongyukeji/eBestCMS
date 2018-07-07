@@ -10,7 +10,7 @@
                         <div class="card-columns">
                             @foreach ($category as $cate)
                                 <div class="card">
-                                    <img class="card-img-top mx-auto d-block" data-src="holder.js/100px120/?theme=industrial&text={{ $cate->name }}" src="" alt="Card image cap">
+                                    <img class="card-img-top mx-auto d-block" data-src="holder.js/246x120/?theme=industrial&text={{ $cate->name }}" src="" alt="Card image cap">
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $cate->name }}</h5>
                                         <p class="card-text">
