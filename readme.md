@@ -21,7 +21,7 @@ $ composer create-project hongyukeji/ebestcms ebestcms dev-master
 ```
 $ git clone https://github.com/hongyukeji/eBestCMS.git
 $ composer update
-$ edit .env
+$ cp -i ./.env.example ./.env
 $ php artisan migrate:fresh --seed
 ```
 
