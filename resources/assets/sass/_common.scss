@@ -10,6 +10,8 @@ body {
   /* Margin bottom by footer height */
   position: relative;
   min-height: 100%;
+  font-family: sans-serif;
+  color: #777777;
 }
 
 /* Footer */
@@ -46,8 +48,12 @@ body {
   border-radius: 0;
 }
 
-.card-header {
+.card-header, .card-footer {
   background-color: rgba(0, 0, 0, 0);
+}
+
+.card-default {
+  margin-bottom: 1.5rem;
 }
 
 .card-default .card-header {

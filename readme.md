@@ -80,6 +80,7 @@ location / {
 |名称|内容|
 |:----|:-----:|
 php artisan migrate  |   执行迁移   |
+php artisan migrate:fresh  |   快速重建迁移
 php artisan migrate:refresh --seed  |   回滚并重新运行所有迁移和填充文件   |
 php artisan migrate:rollback  |   回滚上一次的迁移   |
 php artisan migrate:reset  |   回滚所有迁移   |
