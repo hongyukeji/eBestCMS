@@ -16,7 +16,7 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <a href="#" target="_blank">
-                                        <img class="d-block w-100" data-src="holder.js/800x400?theme=industrial&text=Second slide" src="" alt="First slide">
+                                        <img class="d-block w-100" data-src="holder.js/800x350?theme=industrial&text=Second slide" src="" alt="First slide">
                                         <div class="carousel-caption d-none d-md-block">
                                             <h5>标题</h5>
                                             <p>描述</p>
@@ -25,7 +25,7 @@
                                 </div>
                                 <div class="carousel-item">
                                     <a href="#" target="_blank">
-                                        <img class="d-block w-100" data-src="holder.js/800x400?theme=industrial&text=Second slide" src="" alt="First slide">
+                                        <img class="d-block w-100" data-src="holder.js/800x350?theme=industrial&text=Second slide" src="" alt="First slide">
                                         <div class="carousel-caption d-none d-md-block">
                                             <h5>标题</h5>
                                             <p>描述</p>
@@ -33,7 +33,7 @@
                                     </a>
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100" data-src="holder.js/800x400?theme=industrial&text=Second slide" src="" alt="Third slide">
+                                    <img class="d-block w-100" data-src="holder.js/800x350?theme=industrial&text=Second slide" src="" alt="Third slide">
                                 </div>
                             </div>
                             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -50,7 +50,6 @@
             </div>
             <div class="col-md-3">
                 @component('components.motto')@endcomponent
-                @component('components.music')@endcomponent
             </div>
         </div>
     </div>
