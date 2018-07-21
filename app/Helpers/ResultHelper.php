@@ -13,7 +13,7 @@
  * ============================================================================
  */
 
-namespace App\Api\Helpers;
+namespace App\Helpers;
 
 
 /**
@@ -24,8 +24,17 @@ namespace App\Api\Helpers;
  * $this->fail(404);
  *
  */
-class ResultHelper
+class ResultHelper extends Helper
 {
+    public function json($statusCode, $message, $data = null)
+    {
+        return response()->json([
+            'statusCode' => $statusCode,
+            'message' => $message,
+            'data' => $data
+        ]);
+    }
+
     public function success($data = [])
     {
         return response()->json([
