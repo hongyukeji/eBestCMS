@@ -13,7 +13,6 @@
             </div>
             <div class="col-md-3">
                 @component('components.motto')@endcomponent
-                @component('components.music')@endcomponent
             </div>
         </div>
     </div>
