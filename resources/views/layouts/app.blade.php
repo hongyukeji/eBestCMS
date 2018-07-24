@@ -22,10 +22,10 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-light navbar-default">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="//v4.bootcss.com/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top mr-2" alt="">
+                    <img src="/favicon.ico" width="30" height="30" class="d-inline-block align-top mr-2" alt="">
                     {{ config('app.name', 'eBestCMS') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -58,6 +58,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/site/about') }}">关于</a>
                         </li>
+                        <form class="form-inline input-group-sm ml-sm-2">
+                            <input class="form-control mr-sm-2 rounded-0" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-sm btn-outline-secondary my-2 my-sm-0 rounded-0" type="submit">搜索</button>
+                        </form>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
