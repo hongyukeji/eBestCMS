@@ -25,7 +25,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-default">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="/favicon.ico" width="28" height="28" class="d-inline-block align-top mr-2" alt="">
+                    <img src="/favicon.ico" width="26" height="26" class="d-inline-block align-top mr-1" alt="">
                     {{ config('app.name', 'eBestCMS') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
