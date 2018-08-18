@@ -97,9 +97,6 @@ class InitCommand extends Command
                 exec("composer dump-autoload");
             }
 
-            Artisan::call("ide-helper:generate");
-            $this->info('A new helper file was written to _ide_helper.php');
-
             $this->info("优化缓存成功");
         } else {
             $this->warn("取消优化缓存命令");
