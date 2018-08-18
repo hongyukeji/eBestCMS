@@ -10460,7 +10460,7 @@ body {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-  border-top: 4px solid #18D26E;
+  border-top: 4px solid #409EFF;    /*#18D26E*/
 }
 
 .card-default {
