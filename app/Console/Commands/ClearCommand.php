@@ -54,8 +54,10 @@ class ClearCommand extends Command
         Artisan::call("config:clear");
         $this->info('Configuration cache cleared!');
 
-        //Artisan::call("debugbar:clear");
-        //$this->info('Debugbar Storage cleared!');
+        if(is_dir(storage_path('debugbar'))){
+            Artisan::call("debugbar:clear");
+            $this->info('Debugbar Storage cleared!');
+        }
 
         Artisan::call("route:clear");
         $this->info('Route cache cleared!');
